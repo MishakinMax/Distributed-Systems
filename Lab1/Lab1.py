@@ -19,5 +19,5 @@ if(days < 0):
     year -= 1
     days = 365 - s.day
 
-print("Today is " + str(datetime.now().strftime('%d.%m.%y')) +", you are "+ str(year) +" year ("+str(days)+" days) old.")
+print("Today is " + str(datetime.now().strftime('%d.%m.%y')) +", you are "+ str(year) +" year ("+str((datetime.now() - s).days)+" days) old.")
 
