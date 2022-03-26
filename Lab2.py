@@ -2,21 +2,27 @@ import subprocess
 import os
 def echo(text):
     print(text)
+    
 def ping(text):
     pin = subprocess.getoutput(f"ping 192.168.1.1")
     print(pin)
+    
 def login(text):
     text = text.split()
     str = "Success" if(text[1] == "true" and text[2] == "true") else "fail"
     print(str)
+    
 def list(text):
     print(os.listdir("."))
+    
 def msg(text):
     text = text.split()
     print(text[2] + " was sent to " + text[1])
+    
 def file(text):
     text = text.split()
     print(text[2] + " was sent to " + text[1])
+    
 def exit(text):
     os._exit(0)
 #------------------
